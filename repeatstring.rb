@@ -8,21 +8,19 @@
 #   arr = ""
 #   if s.split(//).all? {|x| x == "a"}
 #     results = n
-#   else 
+#   else
 #     while arr.size < n
 #       s.split(//).each { |x| arr << x}
-#     end     
+#     end
 #     ok = arr.slice!(0..n)
 #     results = ok.count "a"
 #   end
 #   results
 # end
-def repeatedString(s, n)
-  s.count "a"
-  
-
+def repeatedString(s, _n)
+  s.count 'a'
 end
-puts repeatedString("hollaa", 100)
+puts repeatedString('hollaa', 100)
 
 # result = repeatedString s, n
 
