@@ -9,36 +9,29 @@ end
 
 class LinkedList
   #setup head and tail
-  attr_accessor :head, :tail, :length 
+  attr_accessor :head, :tail
   
   def initialize()
-    @head = nil
+	  @head = nil
     @tail = nil
-    @length = 0
   end
 
   def add(number)
-    # your code here
-    new_node = Node.new(number)
-    
+    node = Node.new(number)
     if @head.nil?
-      @head = new_node
+      @head = node
       @tail = @head
     else
-      @tail.next_node = new_node
-      @tail = new_node
+      @tail.next_node = node
+      @tail = @tail.next_node
     end
-    
-    @length += 1
-    self
   end
 
   def get(index)
     # your code here
-    counter = 0 
+    counter = 0
     results = @head
-    while results
-      break if counter == index
+    while counter != index
       results = results.next_node
       counter += 1
     end
@@ -50,5 +43,6 @@ list = LinkedList.new
 
 list.add(3)
 list.add(5)
+list.add(7)
 puts list.get(1)
 # => 5
