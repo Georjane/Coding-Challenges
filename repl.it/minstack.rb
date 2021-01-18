@@ -84,6 +84,7 @@ class Stack
 
   def initialize
     @list = LinkedList.new
+    @list.length = 0
   end
 
   def push(number)
@@ -94,56 +95,35 @@ class Stack
     results = @list.get_node(0).value
     @list.remove(0)
     results
-
   end
+
+  def min
+    return if @list.length.zero?
+    i = 0
+    arr = []
+    while i < @list.length
+      arr.push(@list.get_node(i).value)
+      i = i + 1
+    end
+    arr.sort[0]
 end
 
-class Queue
-  attr_accessor :list
 
-  def initialize
-    @list = LinkedList.new
-  end
-  
-  def add(number)
-    node = Node.new(number)
-    if @head.nil?
-      @head = node
-      @tail = @head
-    else
-      @tail.next_node = node
-      @tail = @tail.next_node
-    end
-  end
-  
-  def remove
-    if @head.nil?
-      anwser = -1
-    else
-      anwser = @head.value
-      @head = @head.next_node
-    end
-    anwser
-  end
-end
-
-queue = Queue.new
-
-queue.add(3)
-queue.add(5)
-puts queue.remove
+stack = Stack.new
+stack.push(3)
+stack.push(5)
+puts stack.min
 # => 3
 
-queue.add(2)
-queue.add(7)
-puts queue.remove
-# => 5
+stack.pop
+stack.push(7)
+puts stack.min
+# => 3
 
-puts queue.remove
+stack.push(2)
+puts stack.min
 # => 2
 
-puts queue.remove
-# => 7
-
-puts queue.remove
-# => -1
+stack.pop
+puts stack.min
+# => 3

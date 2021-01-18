@@ -88,25 +88,18 @@ class Stack
   end
 
   def push(number)
-    # your code here
       @list.add_at(0, number)
-      @list.length += 1
   end
   
   def pop
-    # your code here
     results = @list.get_node(0).value
     @list.remove(0)
-    @list.length -= 1
     results
 
   end
 end
 
 stack = Stack.new
-# stack.push(3)
-# # stack.push(5)
-# puts stack.list.head.value
 stack.push(3)
 stack.push(5)
 puts stack.pop
