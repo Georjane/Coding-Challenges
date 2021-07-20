@@ -18,6 +18,7 @@ Level up your coding skills and quickly land a job. This is the best place to ex
 - [Missing-number](https://github.com/Georjane/Coding-Challenges/blob/master/leetcode/missing-number.js)
 - [Single-number](https://github.com/Georjane/Coding-Challenges/blob/master/leetcode/single-number.js)
 - [Two-sum](https://github.com/Georjane/Coding-Challenges/blob/master/leetcode/two-sum.js)
+- [Roman-to-integer](https://github.com/Georjane/Coding-Challenges/blob/master/leetcode/roman-to-integer].js)
 
 ## Repl.it
 - [ArraysAndLinkedLists](https://github.com/Georjane/Coding-Challenges/blob/master/repl.it/ArraysAndLinkedLists.rb)
